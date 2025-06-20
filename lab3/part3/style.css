@@ -43,3 +43,24 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+*{
+  font-size: 10px;
+}
+
+h1{
+  font-size: 24px;
+}
+
+h2{
+  font-size: 18px;
+}
+
+body{
+  line-height: 14px;
+}
+
+header{
+  margin: auto;
+  text-align: center;
+}
