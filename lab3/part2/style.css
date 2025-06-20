@@ -8,7 +8,22 @@ div {
     width: 200px;
     height: 200px;
     border: 1px solid black;
+    border-radius: 5%;
     margin: auto;
 
     text-align: center;
+    /*
+    One rem = 16px. So need to calculate 18px.
+    16/2 = 8.
+    so 2px = 1/8 of 16px, or One Rem
+
+    1/8 in decimal form = 0.125
+
+    So, for 18px fontsize using rem, we will need to use 1.125 rem.
+
+    Source(s) used: 
+    https://www.freecodecamp.org/news/what-is-rem-in-css-rem-unit-font-size-padding-height-and-more/#:~:text=1rem%20means%201%20times%20the%20root%20font-size.&text=then%20anywhere%20you%20use%201rem,as%208px%20%2C%20and%20so%20on.
+    */
+    font-size: 1.125rem;
+    background-color: aqua;
 }
