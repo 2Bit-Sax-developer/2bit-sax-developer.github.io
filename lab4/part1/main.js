@@ -55,9 +55,9 @@ function result() {
     }
 
     let newStory = storyText;
-    let itemx = randomValueFromArray(insertx);
-    let itemy = randomValueFromArray(inserty);
-    let itemz = randomValueFromArray(insertz);
+    let xItem = randomValueFromArray(insertx);
+    let yItem = randomValueFromArray(inserty);
+    let zItem = randomValueFromArray(insertz);
 
     story.textContent = "";
     story.style.visibility = 'visible';
