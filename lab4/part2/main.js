@@ -52,6 +52,26 @@ for( file of imageFiles){
 }
 
 /* Wiring up the Darken/Lighten button */
-btn.addEventListener("click", function(this){
+btn.addEventListener("click", function(){
+
+    let newClass, newText, newColour;
+
+    const btnClass = btn.getAttribute("class");
     
-})
+    if(btnClass == "dark"){
+
+       newClass = "light";
+       newText = "Lighten";
+       newColour = "rgb(0 0 0 / 50%)"
+
+    } else if (btnClass == "light"){
+
+        newClass = "dark";
+        newText = "Darken";
+        newColour = "rgb(0 0 0 / 0%)"
+    }
+
+    btn.setAttribute("class", newClass);
+    btn.setAttribute("textcontent", newText);
+    overlay.style.backgroundColor = newColour;
+});
