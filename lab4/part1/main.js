@@ -3,7 +3,7 @@
     File: main.js
     Date: August 1st 2025
 
-    A javascritp document used to generate as silly story for the user
+    A javascript document used to generate as silly story for the user
 */
 
 //1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
@@ -53,13 +53,11 @@ function result() {
 
     if(document.getElementById("uk").checked) {
 
-        const weight = Math.round(300);
-        const temperature =  Math.round(94);
+        const weight = Math.round((300)/14)+" stone";
+        const temperature =  Math.round((94-32)*(5/9))+" centigrade";
 
-    } else if (document.getElementById("us").checked){
-
-        const weight=0;
-        const temperature-0;
+        newStory = newStory.replace("300 pounds", weight);
+        newStory = newStory.replace("94 fahrenheit", temperature);
     }
 
     let newStory = storyText;
