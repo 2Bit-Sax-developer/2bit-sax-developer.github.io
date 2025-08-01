@@ -14,6 +14,10 @@ const ctx = canvas.getContext("2d");
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
+//Variables for score trackign
+const para = document.querySelector('p');
+let count = 0;
+
 // function to generate random number
 
 function random(min, max) {
