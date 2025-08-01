@@ -59,6 +59,10 @@ function result() {
     let yItem = randomValueFromArray(inserty);
     let zItem = randomValueFromArray(insertz);
 
+    newStory = newStory.replace(":insertx:", xItem);
+    newStory = newStory.replace(":inserty:", yItem);
+    newStory = newStory.replace(":insertz:", zItem);
+
     story.textContent = "";
     story.style.visibility = 'visible';
 }
