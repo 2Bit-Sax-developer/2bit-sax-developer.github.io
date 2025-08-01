@@ -32,9 +32,15 @@ const imageAlts = {
 
 /* Looping through images */
 
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
-thumbBar.appendChild(newImage);
+for( file of imageFiles){
+
+    const imageLink = file;
+    const imageAlt = imageAlts[file];
+
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', imageLink);
+    newImage.setAttribute('alt', imageAlt);
+    thumbBar.appendChild(newImage);
+}
 
 /* Wiring up the Darken/Lighten button */
