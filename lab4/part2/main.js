@@ -12,6 +12,7 @@ const thumbBar = document.querySelector('.thumb-bar');
 const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
+//Constant to store the filepath to the image folder
 const imageFilePath = "images/";
 
 /* Declaring the array of image filenames */
@@ -36,28 +37,35 @@ const imageAlts = {
 
 for( file of imageFiles){
 
+    //Store the image link and alt text in consts
     const imageLink = imageFilePath+file;
     const imageAlt = imageAlts[file];
 
+    //Create new image element and set its src and alt to the values stored above
     const newImage = document.createElement('img');
     newImage.setAttribute('src', imageLink);
     newImage.setAttribute('alt', imageAlt);
-
+    
+    //Add event listener to change the displayed image when the new image is clicked in the thumbBar
     newImage.addEventListener("click", function(){
         displayedImage.setAttribute('src', imageLink);
         displayedImage.setAttribute('alt', imageAlt);
     });
 
+    //Append image to thumbbar
     thumbBar.appendChild(newImage);
 }
 
 /* Wiring up the Darken/Lighten button */
 btn.addEventListener("click", function(){
 
+    //Declare variables to hold the new values
     let newClass, newText, newColour;
 
+    //Get the buttons current class
     const btnClass = btn.getAttribute("class");
     
+    //Change values based on which class is detected
     if(btnClass == "dark"){
 
        newClass = "light";
@@ -71,6 +79,7 @@ btn.addEventListener("click", function(){
         newColour = "rgb(0 0 0 / 0%)"
     }
 
+    //Change the button and overlay according to the new values
     btn.setAttribute("class", newClass);
     btn.setAttribute("textcontent", newText);
     overlay.style.backgroundColor = newColour;
