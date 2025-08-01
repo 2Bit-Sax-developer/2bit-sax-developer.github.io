@@ -14,9 +14,9 @@ const ctx = canvas.getContext("2d");
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
-//Variables for score trackign
+//Variables for score tracking
 const para = document.querySelector('p');
-let count = 0;
+let ballCount = 0;
 
 // function to generate random number
 
@@ -163,8 +163,8 @@ class EvilCircle extends Shape {
 
                 if (distance < this.size + ball.size) {
                 ball.exists = false;
-                count--;
-                para.textContent = 'Ball count: ' + count;
+                ballCount--;
+                para.textContent = 'Ball count: ' + ballCount;
                 }
             }
         }
@@ -189,8 +189,8 @@ while (balls.length < 25) {
     );
 
     balls.push(ball);
-    count++;
-    para.textContent = 'Ball count: ' + count;
+    ballCount++;
+    para.textContent = 'Ball count: ' + ballCount;
 }
 
 //declare the evil circle
@@ -201,9 +201,11 @@ function loop() {
     ctx.fillRect(0, 0, width, height);
 
     for (const ball of balls) {
-        ball.draw();
-        ball.update();
-        ball.collisionDetect();
+        if (ball.exists) {
+            ball.draw();
+            ball.update();
+            ball.collisionDetect();
+        }
     }
 
     evilBall.draw();
