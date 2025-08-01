@@ -42,7 +42,16 @@ for( file of imageFiles){
     const newImage = document.createElement('img');
     newImage.setAttribute('src', imageLink);
     newImage.setAttribute('alt', imageAlt);
+
+    newImage.addEventListener("click", function(){
+        displayedImage.setAttribute('src', imageLink);
+        displayedImage.setAttribute('alt', imageAlt);
+    });
+
     thumbBar.appendChild(newImage);
 }
 
 /* Wiring up the Darken/Lighten button */
+btn.addEventListener("click", function(this){
+    
+})
