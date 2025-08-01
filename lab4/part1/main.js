@@ -46,9 +46,9 @@ randomize.addEventListener('click', result);
 function result() {
 
     let newStory = storyText;
-    let xItem = randomValueFromArray(insertx);
-    let yItem = randomValueFromArray(inserty);
-    let zItem = randomValueFromArray(insertz);
+    const xItem = randomValueFromArray(insertx);
+    const yItem = randomValueFromArray(inserty);
+    const zItem = randomValueFromArray(insertz);
 
     newStory = newStory.replaceAll(":insertx:", xItem);
     newStory = newStory.replaceAll(":inserty:", yItem);
