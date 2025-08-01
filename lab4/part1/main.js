@@ -69,6 +69,6 @@ function result() {
     newStory = newStory.replace(":inserty:", yItem);
     newStory = newStory.replace(":insertz:", zItem);
 
-    story.textContent = "";
+    story.textContent = newStory;
     story.style.visibility = 'visible';
 }
