@@ -45,8 +45,6 @@ randomize.addEventListener('click', result);
 
 function result() {
 
-    
-
     if(customName.value !== '') {
         const name = customName.value;
     }
@@ -55,6 +53,11 @@ function result() {
         const weight = Math.round(300);
         const temperature =  Math.round(94);
     }
+
+    let newStory = storyText;
+    let itemx = randomValueFromArray(insertx);
+    let itemy = randomValueFromArray(inserty);
+    let itemz = randomValueFromArray(insertz);
 
     story.textContent = "";
     story.style.visibility = 'visible';
