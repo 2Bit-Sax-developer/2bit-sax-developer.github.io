@@ -12,6 +12,8 @@ const thumbBar = document.querySelector('.thumb-bar');
 const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
+const imageFilePath = "images/";
+
 /* Declaring the array of image filenames */
 const imageFiles = [
     "pic1.jpg",
@@ -34,7 +36,7 @@ const imageAlts = {
 
 for( file of imageFiles){
 
-    const imageLink = file;
+    const imageLink = imageFilePath+file;
     const imageAlt = imageAlts[file];
 
     const newImage = document.createElement('img');
