@@ -81,6 +81,6 @@ btn.addEventListener("click", function(){
 
     //Change the button and overlay according to the new values
     btn.setAttribute("class", newClass);
-    btn.setAttribute("textContent", newText);
+    btn.textContent = newText;
     overlay.style.backgroundColor = newColour;
 });
