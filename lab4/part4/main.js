@@ -43,13 +43,10 @@ class Shape {
 }
 
 //Set up ball class
-class Ball {
+class Ball extends Shape{
 
     constructor(x, y, velX, velY, color, size) {
-        this.x = x;
-        this.y = y;
-        this.velX = velX;
-        this.velY = velY;
+        super(x, y, velX, velY);
         this.color = color;
         this.size = size;
         this.exists = true;
@@ -162,9 +159,9 @@ class EvilCircle extends Shape {
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
                 if (distance < this.size + ball.size) {
-                ball.exists = false;
-                ballCount--;
-                para.textContent = 'Ball count: ' + ballCount;
+                    ball.exists = false;
+                    ballCount--;
+                    para.textContent = 'Ball count: ' + ballCount;
                 }
             }
         }
