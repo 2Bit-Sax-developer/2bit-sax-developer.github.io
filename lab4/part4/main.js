@@ -170,6 +170,9 @@ class EvilCircle extends Shape {
 //array to store the balls
 const balls = [];
 
+//declare the evil circle
+const evilBall = new EvilCircle(random(0, width), random(0, height));
+
 //Loop to populate the screen with balls
 while (balls.length < 25) {
     const size = random(10, 20);
@@ -196,6 +199,10 @@ function loop() {
         ball.update();
         ball.collisionDetect();
     }
+
+    evilBall.draw();
+    evilBall.checkBounds();
+    evilBall.collisionDetect();
 
     requestAnimationFrame(loop);
 }
