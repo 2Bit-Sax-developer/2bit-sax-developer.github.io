@@ -1,3 +1,11 @@
+/*
+Name: Thomas McLean
+File: main.js
+Date: August 1st 2025
+
+Javascript used for an image gallery
+*/
+
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
