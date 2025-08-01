@@ -47,11 +47,19 @@ function result() {
 
     if(customName.value !== '') {
         const name = customName.value;
+
+        newStory = newStory.replace("Bob", name);
     }
 
     if(document.getElementById("uk").checked) {
+
         const weight = Math.round(300);
         const temperature =  Math.round(94);
+
+    } else if (document.getElementById("us").checked){
+
+        const weight=0;
+        const temperature-0;
     }
 
     let newStory = storyText;
