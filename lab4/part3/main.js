@@ -1,4 +1,10 @@
+/*
+Name: Thomas McLean
+File: index.html
+Date: August 1st 2025
 
+Javascript to make a bunch of bouncing balls on a webpage
+*/
 
 // setup canvas
 
