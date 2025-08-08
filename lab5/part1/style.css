@@ -6,12 +6,12 @@ html, body {
 }
 
 html {
-  font-size: 10px;
-  background-color: #dde;
+  font-size: 14px;
+  background-color: gray;
 }
 
 body {
-  width: 80%;
+  width: 97.5%;
   min-width: 1024px;
   margin: 0 auto;
 }
@@ -52,7 +52,7 @@ p, li, table {
 /* || header layout */
 
 div[class="nav"], article, footer, .secondary {
-  background-color: green;
+  background-color: #7AC7D6;
 }
 
 article, footer, .secondary {
